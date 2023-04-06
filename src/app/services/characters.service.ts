@@ -13,6 +13,7 @@ export class CharactersService {
   constructor(private httpClient: HttpClient) {
 
     this.baseUrl = 'http://localhost:3000/api/characters'
+  
   }
 
 
@@ -22,9 +23,10 @@ export class CharactersService {
     )
   }
 
-  getCharacterById(characterId: number) {
+  
+  getCharacterById(id: number) {
     return firstValueFrom(
-      this.httpClient.get<any>(`${this.baseUrl}/${characterId}`)
+      this.httpClient.get<any>(`${this.baseUrl}/${id}`)
     );
   }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CharactersService } from 'src/app/services/characters.service';
 
 @Component({
@@ -10,22 +11,24 @@ export class CharactersComponent {
 
 
   characters: any[]
-  character: {}
+ character: any
   
-  constructor(private charactersService: CharactersService) {
+  constructor(
+    private charactersService: CharactersService,
+    private activatedRoute: ActivatedRoute) {
     this.characters = []
-    this.character = {}
+    this.character
   }
 
   async ngOnInit() {
 
     try {
-      const response = await this.charactersService.getAll()
-      this.characters = response
+      this.characters = await this.charactersService.getAll()
     } catch (error) {
       console.log(error)
     }
 
   }
 
-}
+  
+  }
