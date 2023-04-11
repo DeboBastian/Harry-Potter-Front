@@ -1,4 +1,16 @@
+@font-face {
+    font-family: 'harrypotterregular';
+    src: url('../src/assets/fonts/harrp___-webfont.woff2') format('woff2'),
+        url('../src/assets/fonts/harrp___-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
+
+
+*{
+    font-family: 'harrypotterregular';
+}
 body{
     background: #110d36;
 background: -webkit-linear-gradient(to right, #191631, #666392, #191631);

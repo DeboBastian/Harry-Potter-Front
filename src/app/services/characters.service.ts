@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 
@@ -18,8 +18,13 @@ export class CharactersService {
 
 
   getAll() {
+    const options = {
+      headers: new HttpHeaders({
+        'Authorization': localStorage.getItem('tokenharry')!
+      })
+    }
     return firstValueFrom(
-      this.httpClient.get<any[]>(this.baseUrl)
+      this.httpClient.get<any[]>(this.baseUrl, options)
     )
   }
 
