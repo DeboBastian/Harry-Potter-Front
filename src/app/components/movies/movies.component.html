@@ -1,1 +1,9 @@
-<p>movies works!</p>
+<div class="container">
+    <div class="movies">
+        <div class="movie" *ngFor="let movie of movies">
+            <h3>{{movie.title}}</h3>
+            <p>{{movie.year}}</p>
+            <img src="{{movie.image}}" alt="">
+        </div>
+    </div>
+</div>

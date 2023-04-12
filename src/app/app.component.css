@@ -10,3 +10,11 @@ nav{
     mask-image: linear-gradient(to bottom, black 56%, rgba(0, 0, 0, 0.01) 92%);
 }
 
+.nav-link{
+    font-size: 24px;
+    text-shadow: 2px 2px black;
+}
+/* 
+.active{
+    color: #ff7a0d;
+} */
