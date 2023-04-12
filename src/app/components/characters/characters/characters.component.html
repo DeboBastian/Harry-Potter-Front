@@ -2,12 +2,13 @@
     <div class="characters">
         <div class="character" [routerLink]="['/character', character.id]" *ngFor="let character of characters"
             [ngClass]="{
-            'character-alive': character.status === 'alive',
-            'character-dead': character.status === 'dead',
-            'character-unknown': character.status === 'unknown'
+            'character-hero': character.type === 'hero',
+            'character-villain': character.type === 'villain',
+            'character-neutral': character.type === 'neutral' 
+            
         }">
             <h3>{{character.name}}</h3>
-            <p>{{character.type}}</p>
+            <p>{{character.status}}</p>
             <img src="{{character.image}}" alt="">
         </div>
     </div>

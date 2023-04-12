@@ -1,13 +1,15 @@
 h3{
-    color:white;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(252, 226, 26);
     width: 250px;
-    font-size: 24px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.5em;
+    text-shadow: 3px 2px 1px black;
 }
 
 p{
-    color: gray;
-    font-size: 24px;
+    color: rgba(244, 241, 194, 0.783);
+    font-size: 26px;
     text-align: center;
 }
 
@@ -29,8 +31,8 @@ p{
     width: 250px;
     height: 350px;
     transition: .35s;
-  border-radius: 10px;
-background-size: cover;
+    border-radius: 10px;
+    background-size: cover;
 }
 
 .movie img:hover {
